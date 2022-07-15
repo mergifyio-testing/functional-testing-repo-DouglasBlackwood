@@ -1,0 +1,14 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+      priority: high
+      update_method: rebase
+  conditions:
+  - base=20220715122631/test_queue_update_inplace_blocking_merge/main
+  - label=queue
+  - status-success=continuous-integration/fake-ci
+  name: Merge priority high
+queue_rules:
+- conditions: []
+  name: default
