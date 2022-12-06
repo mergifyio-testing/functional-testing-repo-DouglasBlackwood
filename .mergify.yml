@@ -1,0 +1,16 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+      priority: high
+  conditions:
+  - base=20221206161022/test_batch_max_failure_resolution_attempts/main
+  - label=queue
+  name: Merge priority high
+queue_rules:
+- batch_max_failure_resolution_attempts: 1
+  batch_size: 4
+  conditions:
+  - status-success=continuous-integration/fake-ci
+  name: default
+  speculative_checks: 2
