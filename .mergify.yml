@@ -1,0 +1,14 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: foo
+  conditions:
+  - base=20230110144744/test_get_queue_pull_next_evaluation_at/main
+  - label=queue
+  name: queue
+queue_rules:
+- allow_inplace_checks: false
+  conditions:
+  - base=20230110144744/test_get_queue_pull_next_evaluation_at/main
+  - schedule=MON-FRI 12:00-15:00
+  name: foo
