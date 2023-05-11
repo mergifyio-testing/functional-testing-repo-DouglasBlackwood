@@ -1,0 +1,12 @@
+
+name: Hello CI
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - run: |
+          echo hello
