@@ -1,0 +1,10 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - label=queue
+  - base=20231004084331/test_queue_branch_protection_linear_history/main
+  name: merge
+queue_rules:
+- name: default
