@@ -1,0 +1,5 @@
+pull_request_rules:
+- actions: {}
+  conditions:
+  - base=20231025141310/test_config_editor_simulator/main
+  name: simulator
