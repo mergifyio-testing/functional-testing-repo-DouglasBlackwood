@@ -1,0 +1,11 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20231030144409/test_branch_protection_settings_not_validated_anymore/main
+  - label=queue
+  name: Queue on label
+queue_rules:
+- merge_conditions: []
+  name: default
