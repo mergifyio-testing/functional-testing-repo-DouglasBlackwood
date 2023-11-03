@@ -1,0 +1,22 @@
+
+pull_request_rules:
+  - name: a lot of stuff
+    conditions:
+      - base=20231103155009/test_pull_summary/main
+      - or:
+        - schedule=MON-SUN 00:00-23:59
+        - label=foobar
+    actions:
+      post_check:
+        summary: "Did you check {{ author }}?"
+        success_conditions:
+          - "author=foobar"
+          - "label=whatever"
+          - "base=20231103155009/test_pull_summary/main"
+      comment:
+        message: "Welcome {{ author }}."
+      edit:
+        draft: True
+      assign:
+        users:
+          - mergify-test1
