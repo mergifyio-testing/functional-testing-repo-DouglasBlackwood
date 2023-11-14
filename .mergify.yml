@@ -1,0 +1,24 @@
+pull_request_rules:
+- actions:
+    queue: {}
+  conditions:
+  - label=queue
+  name: Add to merge queue
+- actions:
+    label:
+      toggle:
+      - 'queued: {{queue_name}}'
+  conditions:
+  - queue-position>0
+  name: Label queue name
+queue_rules:
+- allow_inplace_checks: false
+  merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  name: hotfix
+  queue_conditions:
+  - label=hotfix
+- allow_inplace_checks: false
+  merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  name: default
