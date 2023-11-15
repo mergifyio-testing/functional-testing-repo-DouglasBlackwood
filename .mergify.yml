@@ -1,0 +1,12 @@
+pull_request_rules:
+- actions:
+    rebase: {}
+  conditions:
+  - base=20231115125044/test_rebase_action_on_conflict/main
+  name: rebase
+- actions:
+    merge: {}
+  conditions:
+  - base=20231115125044/test_rebase_action_on_conflict/main
+  - label=merge
+  name: merge
