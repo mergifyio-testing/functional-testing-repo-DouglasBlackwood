@@ -1,0 +1,12 @@
+pull_request_rules:
+- actions:
+    queue: {}
+  conditions:
+  - base=20240109152701/test_current_datetime_range_with_uncertain_year/main
+  name: automatic merge
+queue_rules:
+- merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  name: default
+  queue_conditions:
+  - label=queue
