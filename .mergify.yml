@@ -1,0 +1,9 @@
+
+queue_rules:
+  - name: default
+    allow_inplace_checks: false
+    merge_conditions:
+      - check-success=continuous-integration/fake-ci
+    queue_conditions:
+      - check-success=continuous-integration/fake-ci
+      - base=20240202160724/test_requeue_after_push/main
