@@ -1,0 +1,10 @@
+
+queue_rules:
+  - name: default
+    allow_inplace_checks: false
+    merge_method: squash
+    merge_conditions:
+      - check-success=continuous-integration/fake-ci
+    queue_conditions:
+      - check-success=continuous-integration/fake-ci
+      - base=20240202133645/test_charly/main
