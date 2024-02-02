@@ -1,0 +1,16 @@
+
+queue_rules:
+  - name: default
+    batch_size: 2
+    batch_max_wait_time: 0 s
+    speculative_checks: 2
+    allow_inplace_checks: false
+    merge_method: squash
+    merge_conditions:
+      - check-success=continuous-integration/fake-ci
+      - check-success=continuous-integration/fake-ci-long
+    branch_protection_injection_mode: merge
+    queue_conditions:
+      - check-success=continuous-integration/fake-ci
+      - check-success=continuous-integration/fake-ci-long
+      - base=20240202133351/test_charly/main
