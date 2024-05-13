@@ -1,0 +1,5 @@
+queue_rules:
+- conditions:
+  - base=20240513125724/test_charly/main
+  - check-success=continuous-integration/fake-ci
+  name: main
