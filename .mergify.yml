@@ -1,0 +1,15 @@
+pull_request_rules:
+- actions:
+    queue:
+      method: merge
+      name: main
+      update_method: rebase
+  conditions:
+  - base=20240513133801/test_charly/main
+  - label=automerge:rebase
+  name: rebase updates then merge to master
+queue_rules:
+- conditions:
+  - base=20240513133801/test_charly/main
+  - check-success=continuous-integration/fake-ci
+  name: main
