@@ -1,0 +1,4 @@
+queue_rules:
+- conditions:
+  - base=20240514131112/test_guess_queue_name/main
+  name: main
