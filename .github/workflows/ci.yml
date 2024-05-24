@@ -1,0 +1,19 @@
+jobs:
+  uis_cupidatat_et_duis_labore_cupidatat_ipsum_in_sit_Irure_excepteur_irure_fugiat_nulla_ut_consecte1:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Ullamco laborum exercitation cillum sunt ex ut id in mollit commodo est.
+        Quis in tempor ut anim do aliqua labore.
+      run: echo something;exit 1
+    timeout-minutes: 5
+  uis_cupidatat_et_duis_labore_cupidatat_ipsum_in_sit_Irure_excepteur_irure_fugiat_nulla_ut_consecte2:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Ullamco laborum exercitation cillum sunt ex ut id in mollit commodo est.
+        Quis in tempor ut anim do aliqua labore.
+      run: echo something;exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20240524124236/test_charly/main
