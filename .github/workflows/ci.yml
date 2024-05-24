@@ -1,0 +1,19 @@
+jobs:
+  Duis cupidatat et duis labore cupidatat ipsum in sit. Irure excepteur irure fugiat nulla ut consectetur sit exa.:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Ullamco laborum exercitation cillum sunt ex ut id in mollit commodo est.
+        Quis in tempor ut anim do aliqua labore.
+      run: echo something;exit 1
+    timeout-minutes: 5
+  Duis cupidatat et duis labore cupidatat ipsum in sit. Irure excepteur irure fugiat nulla ut consectetur sit exo.:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Ullamco laborum exercitation cillum sunt ex ut id in mollit commodo est.
+        Quis in tempor ut anim do aliqua labore.
+      run: echo something;exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20240524123343/test_charly/main
