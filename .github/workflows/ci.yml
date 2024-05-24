@@ -1,0 +1,23 @@
+jobs:
+  job1:
+    name: Elit ut consectetur culpa ullamco minim. Id Lorem nulla laboris laborum
+      dolore quis reprehenderit cillum officia non tempor cillum.
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Ullamco laborum exercitation cillum sunt ex ut id in mollit commodo est.
+        Quis in tempor ut anim do aliqua labore.
+      run: echo something;exit 1
+    timeout-minutes: 5
+  job2:
+    name: Elit ut consectetur culpa ullamco minim. Id Lorem nulla laboris laborum
+      dolore quis reprehenderit cillum officia non tempor cillum.
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Ullamco laborum exercitation cillum sunt ex ut id in mollit commodo est.
+        Quis in tempor ut anim do aliqua labore.
+      run: echo something;exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20240524130411/test_charly/main
