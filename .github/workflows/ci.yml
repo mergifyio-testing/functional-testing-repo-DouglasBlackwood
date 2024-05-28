@@ -1,0 +1,12 @@
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Step 1
+      run: echo fails on sha ${{ github.event.pull_request.head.sha }} run_attempt
+        ${{ github.run_attempt }}; exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20240528063219/test_log_downloading/main
