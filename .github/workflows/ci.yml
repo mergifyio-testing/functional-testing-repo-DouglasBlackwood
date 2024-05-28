@@ -1,0 +1,11 @@
+jobs:
+  unit-tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Step 1
+      run: echo fails on sha ${{ github.event.pull_request.head.sha }};exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20240528081118/test_charly/main
