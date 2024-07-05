@@ -1,0 +1,7 @@
+merge_protections:
+- description: some description
+  if:
+  - base=main
+  name: some rule
+  success_conditions:
+  - label=foo
