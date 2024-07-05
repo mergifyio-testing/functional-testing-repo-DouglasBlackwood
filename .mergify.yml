@@ -1,0 +1,7 @@
+merge_protections:
+- description: some description
+  if:
+  - base=20240705135559/test_merge_protection_rules/main
+  name: some rule
+  success_conditions:
+  - label=foo
