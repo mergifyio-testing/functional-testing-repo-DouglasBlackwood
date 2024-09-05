@@ -1,0 +1,34 @@
+partition_rules:
+- fallback_partition: true
+  name: fallback
+- conditions:
+  - files~=^source/go/
+  name: go
+- conditions:
+  - files~=^source/infrastructure/
+  name: infrastructure
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - label!=high-priority
+  - base=20240905081921/test_anchorage/main
+  - status-success=buildkite/anchorage
+  name: Merge default
+- actions:
+    queue:
+      name: high-priority
+  conditions:
+  - label=high-priority
+  - base=20240905081921/test_anchorage/main
+  name: Merge high-priority
+queue_rules:
+- name: high-priority
+  queue_conditions:
+  - status-success=buildkite/anchorage
+- batch_size: 4
+  name: default
+  queue_conditions:
+  - status-success=buildkite/anchorage
+  speculative_checks: 8
