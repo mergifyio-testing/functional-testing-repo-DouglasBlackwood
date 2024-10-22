@@ -1,0 +1,16 @@
+merge_protections:
+- if:
+  - base=20241022130150/test_merge_protections_queue_injection/main
+  name: CI
+  success_conditions:
+  - check-success=continuous-integration/fake-ci
+pull_request_rules:
+- actions:
+    queue: {}
+  conditions:
+  - base=20241022130150/test_merge_protections_queue_injection/main
+  - label=queue
+  name: default
+queue_rules:
+- allow_inplace_checks: false
+  name: default
