@@ -1,0 +1,10 @@
+pull_request_rules:
+- actions:
+    queue: {}
+  conditions:
+  - base=20241022123541/test_merge_protections_queue_injection/main
+  - label=queue
+  name: default
+queue_rules:
+- allow_inplace_checks: false
+  name: default
